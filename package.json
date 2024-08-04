@@ -1,0 +1,16 @@
+{
+  "name": "neurosity-openai-starter",
+  "version": "1.0.0",
+  "description": "This project will help you get started using the Neurosity SDK with OpenAI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.54.0"
+  }
+}
