@@ -1,5 +1,7 @@
 This project will help you get started using the Neurosity SDK with OpenAI.
 
+Need help with setting up your own project? [Schedule a Call](https://tidycal.com/tylerlemke/ai-consulting-call) with me.
+
 ## Getting Started
 
 1. Install the following software
@@ -21,6 +23,7 @@ This project will help you get started using the Neurosity SDK with OpenAI.
 11. [Create an API key from OpenAI](https://platform.openai.com/api-keys) and copy it
 12. Paste the API key into the .env file
 13. Go back to the VS Code Terminal and use the following command to run
-   ```
-   npm start
-   ```
+
+```
+npm start
+```
