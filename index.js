@@ -49,8 +49,8 @@ neurosity.calm().subscribe((calm) => {
 neurosity.kinesis("bitingALemon").subscribe(async (intent) => {
   // Change the number below to change the probility match for
   // firing off the code in the if statement
-  const probabilityMatch = intent.probability > 0.5;
-  if (!alreadyRanLemon && probabilityMatch) {
+  const confidenceMatch = intent.confidence > 0.5;
+  if (!alreadyRanLemon && confidenceMatch) {
     console.log("bitingALemon ran");
     const prompt = "a man biting a lemon";
     createImage(prompt);
@@ -64,8 +64,8 @@ neurosity.kinesis("bitingALemon").subscribe(async (intent) => {
 neurosity.kinesis("leftHandPinch").subscribe(async (intent) => {
   // Change the number below to change the probility match for
   // firing off the code in the if statement
-  const probabilityMatch = intent.probability > 0.5;
-  if (!alreadyRanLeftHand && probabilityMatch) {
+  const confidenceMatch = intent.confidence > 0.5;
+  if (!alreadyRanLeftHand && confidenceMatch) {
     console.log("leftHandPinch ran");
     const prompt = "a left hand pinching";
     createImage(prompt);
@@ -79,8 +79,8 @@ neurosity.kinesis("leftHandPinch").subscribe(async (intent) => {
 neurosity.kinesis("tongue").subscribe(async (intent) => {
   // Change the number below to change the probility match for
   // firing off the code in the if statement
-  const probabilityMatch = intent.probability > 0.5;
-  if (!alreadyRanTongue && probabilityMatch) {
+  const confidenceMatch = intent.confidence > 0.5;
+  if (!alreadyRanTongue && confidenceMatch) {
     console.log("tongue ran");
     const prompt = "a tongue sticking out";
     createImage(prompt);
