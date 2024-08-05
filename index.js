@@ -50,7 +50,7 @@ neurosity.kinesis("bitingALemon").subscribe(async (intent) => {
   // Change the number below to change the probility match for
   // firing off the code in the if statement
   const probabilityMatch = intent.probability > 0.5;
-  if (!alreadyRanKinesis && probabilityMatch) {
+  if (!alreadyRanLemon && probabilityMatch) {
     console.log("bitingALemon ran");
     const prompt = "a man biting a lemon";
     createImage(prompt);
