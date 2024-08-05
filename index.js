@@ -66,8 +66,8 @@ neurosity.kinesis("leftHandPinch").subscribe(async (intent) => {
   // firing off the code in the if statement
   const probabilityMatch = intent.probability > 0.5;
   if (!alreadyRanLeftHand && probabilityMatch) {
-    console.log("bitingALemon ran");
-    const prompt = "a man biting a lemon";
+    console.log("leftHandPinch ran");
+    const prompt = "a left hand pinching";
     createImage(prompt);
   }
 
@@ -81,8 +81,8 @@ neurosity.kinesis("tongue").subscribe(async (intent) => {
   // firing off the code in the if statement
   const probabilityMatch = intent.probability > 0.5;
   if (!alreadyRanTongue && probabilityMatch) {
-    console.log("bitingALemon ran");
-    const prompt = "a man biting a lemon";
+    console.log("tongue ran");
+    const prompt = "a tongue sticking out";
     createImage(prompt);
   }
 
