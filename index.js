@@ -28,29 +28,66 @@ const main = async () => {
   console.log("Logged in");
 };
 
-let alreadyRan = false;
+let alreadyRanCalm = false;
+let alreadyRanLemon = false;
+let alreadyRanLeftHand = false;
+let alreadyRanTongue = false;
 
 neurosity.calm().subscribe((calm) => {
-  if (calm.probability > 0.3) {
+  if (calm.probability > 0.3 && !alreadyRanCalm) {
     createChatResponse("I am demotivated. Please Motivate me");
   }
+  alreadyRanCalm = true;
 });
 
 // Change the string in kinesis("bitingALemon")
-// to any of the following to try them out after training in the console
-//
+// to the kinesis / leftHandPinch or other types as listed in the
+// Metrics Predictions section of the neurosity dashboard if you want
+// to try other kinesis types
+
+// Biting A Lemon Example
 neurosity.kinesis("bitingALemon").subscribe(async (intent) => {
   // Change the number below to change the probility match for
   // firing off the code in the if statement
   const probabilityMatch = intent.probability > 0.5;
-  if (!alreadyRan && probabilityMatch) {
+  if (!alreadyRanKinesis && probabilityMatch) {
     console.log("bitingALemon ran");
     const prompt = "a man biting a lemon";
     createImage(prompt);
   }
 
   //ensure we only run the code once to reduce API calls
-  alreadyRan = true;
+  alreadyRanLemon = true;
+});
+
+// Left Hand Pinch Example
+neurosity.kinesis("leftHandPinch").subscribe(async (intent) => {
+  // Change the number below to change the probility match for
+  // firing off the code in the if statement
+  const probabilityMatch = intent.probability > 0.5;
+  if (!alreadyRanLeftHand && probabilityMatch) {
+    console.log("bitingALemon ran");
+    const prompt = "a man biting a lemon";
+    createImage(prompt);
+  }
+
+  //ensure we only run the code once to reduce API calls
+  alreadyRanLeftHand = true;
+});
+
+// Tongue Example
+neurosity.kinesis("tongue").subscribe(async (intent) => {
+  // Change the number below to change the probility match for
+  // firing off the code in the if statement
+  const probabilityMatch = intent.probability > 0.5;
+  if (!alreadyRanTongue && probabilityMatch) {
+    console.log("bitingALemon ran");
+    const prompt = "a man biting a lemon";
+    createImage(prompt);
+  }
+
+  //ensure we only run the code once to reduce API calls
+  alreadyRanTongue = true;
 });
 
 main();
