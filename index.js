@@ -35,7 +35,9 @@ let alreadyRanTongue = false;
 
 neurosity.calm().subscribe((calm) => {
   if (calm.probability > 0.3 && !alreadyRanCalm) {
-    createChatResponse("I am demotivated. Please Motivate me");
+    createChatResponse(
+      "I am demotivated. Please Motivate me - keep the response brief"
+    );
   }
   alreadyRanCalm = true;
 });
@@ -82,7 +84,7 @@ neurosity.kinesis("tongue").subscribe(async (intent) => {
   const confidenceMatch = intent.confidence > 0.5;
   if (!alreadyRanTongue && confidenceMatch) {
     console.log("tongue ran");
-    const prompt = "a tongue sticking out";
+    const prompt = "a person with a tongue sticking out";
     createImage(prompt);
   }
 

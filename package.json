@@ -12,6 +12,7 @@
   "dependencies": {
     "@neurosity/sdk": "^6.5.10",
     "dotenv": "^16.4.5",
+    "open": "^10.1.0",
     "openai": "^4.54.0"
   }
 }
